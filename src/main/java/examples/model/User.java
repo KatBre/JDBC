@@ -1,4 +1,4 @@
-package examples;
+package examples.model;
 
 public class User {
 private Long id;

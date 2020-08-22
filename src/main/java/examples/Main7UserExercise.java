@@ -1,5 +1,7 @@
 package examples;
 
+import examples.model.User;
+
 import java.sql.*;
 import java.util.ArrayList;
 
