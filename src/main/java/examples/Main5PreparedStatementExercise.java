@@ -10,7 +10,14 @@ public class Main5PreparedStatementExercise {
         Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
         List<String> usernames = List.of("Jan", "Ala", "Mike", "Ola");
         List<String> passwords = List.of("password1", "password2", "password3", "password4");
+
+//        // walidacja danych
+//        if(usernames.size() != passwords.size()) {
+//            throw new RuntimeException("message");
+//        }
+
         PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO user(username, password) VALUES(?, ?)");
+
         for (int i = 0; i < usernames.size(); i++) {
             preparedStatement.setString(1, usernames.get(i));
             preparedStatement.setString(2, passwords.get(i));
